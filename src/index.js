@@ -1,22 +1,19 @@
 import React from "react";
 import ReactDom from "react-dom";
 
-// JSX rules
-// return single element
-// div / section / article or Fragment (<React.Fragment></React.Fragment> or <></>)
-// use camelCase for html attribute
-// className instead of class
-// close every element
-// formatting
-
+// Nested Components, React Tools
 
 function Greeting() {
   return (
     <div>
-      <h1>For the Unity. For Darkseid.</h1>
+      <Person />
+      <Message />
     </div>
   );
 }
+
+const Person = () => <h1>John Doe</h1>;
+const Message = () => <p>this is my message</p>;
 
 // function Greeting(){
 //     return React.createElement('div',{},
