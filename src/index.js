@@ -1,17 +1,27 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDom from "react-dom";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+// JSX rules
+// return single element
+// div / section / article or Fragment (<React.Fragment></React.Fragment> or <></>)
+// use camelCase for html attribute
+// className instead of class
+// close every element
+// formatting
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+function Greeting() {
+  return (
+    <div>
+      <h1>For the Unity. For Darkseid.</h1>
+    </div>
+  );
+}
+
+// function Greeting(){
+//     return React.createElement('div',{},
+//     React.createElement('h1', {}, 'For the Unity. For Darkseid.')
+//     )
+// }
+
+ReactDom.render(<Greeting />, document.getElementById("root"));
