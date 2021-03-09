@@ -2,27 +2,41 @@ import React from "react";
 import ReactDom from "react-dom";
 //CSS
 import "./index.css";
+
+const firstBook = {
+  img:
+    "https://images-eu.ssl-images-amazon.com/images/I/81l3rZK4lnL._AC_UL200_SR200,200_.jpg",
+  title: "Ikigai: The Japanese secret to a long and happy life",
+  author: "Héctor García",
+};
+const secondBook = {
+  img:
+    "https://images-eu.ssl-images-amazon.com/images/I/81cpDaCJJCL._AC_UL200_SR200,200_.jpg",
+  title: "The Psychology of Money",
+  author: "Morgan Housel ",
+};
 function BookList() {
   return (
     <section className="booklist">
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
+      <Book
+        img={firstBook.img}
+        title={firstBook.title}
+        author={firstBook.author}
+      />
+      <Book
+        img={secondBook.img}
+        title={secondBook.title}
+        author={secondBook.author}
+      />
     </section>
   );
 }
 
-const Book = () => {
-  const title = "Ikigai: The Japanese secret to a long and happy life";
-  const author = "Héctor García";
+const Book = ({ img, title, author }) => {
+  // const { img, title, author } = props;
   return (
     <article className="book">
-      <img
-        src="https://images-eu.ssl-images-amazon.com/images/I/81l3rZK4lnL._AC_UL200_SR200,200_.jpg"
-        alt=""
-      />
+      <img src={img} alt="" />
       <h1>{title}</h1>
       <h4>{author}</h4>
       {}
